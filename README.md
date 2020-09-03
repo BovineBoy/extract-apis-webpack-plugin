@@ -1,5 +1,7 @@
 # extract-apis-webpack-plugins
 
+从项目中提取 apis 的声明生成 apis-keys.d.ts 文件
+
 ## Install
 
 ```javascript

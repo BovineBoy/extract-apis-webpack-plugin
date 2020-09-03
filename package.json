@@ -1,6 +1,6 @@
 {
   "name": "@ordures/extract-apis-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "dist/extract-apis-webpack-plugin.js",
   "types": "dist/extract-apis-webpack-plugin.d.js",
   "license": "MIT",
