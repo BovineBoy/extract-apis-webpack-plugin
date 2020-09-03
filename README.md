@@ -19,14 +19,10 @@ npm install @ordures/extract-apis-webpack-plugin --dev
 webpack:
 
 ```javascript
-import { ExtractApisPlugin } from "@ordures/extract-apis-webpack-plugin"
+const { ExtractApisPlugin } = require("@ordures/extract-apis-webpack-plugin")
 
 plugins: [
-  new ExtractApisPlugin({
-    filename: 'apis',
-    requireContext: ['/src/modules/', '/src/components/'],
-    outputPath: '/src/types/apis-keys.d.ts'
-  })
+  new ExtractApisPlugin()
 ]
 ```
 

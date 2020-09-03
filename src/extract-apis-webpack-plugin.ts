@@ -42,7 +42,7 @@ function isPlainObject(value: unknown): boolean {
     return prototype === null || prototype === Object.getPrototypeOf({});
 }
 
-class ExtractApisWebpackPlugin {
+class ExtractApisPlugin {
     private outputPath: string;
     private apisList: Set<string>;
     private readonly paths: string[];
@@ -207,7 +207,7 @@ class ExtractApisWebpackPlugin {
     };
 }
 
-export { ExtractApisWebpackPlugin };
+export { ExtractApisPlugin };
 
 function isSameContent(content1: string, content2: string) {
     try {
