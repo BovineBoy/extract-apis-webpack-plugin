@@ -1,9 +1,14 @@
 {
   "name": "@ordures/extract-apis-webpack-plugin",
   "version": "1.0.0",
+  "author": "John Agan <johnagan@gmail.com>",
+  "description": "从项目中提取 apis 的声明生成 apis-keys.d.ts 文件",
   "main": "dist/extract-apis-webpack-plugin.js",
   "types": "dist/extract-apis-webpack-plugin.d.js",
   "license": "MIT",
+  "files": [
+    "dist/"
+  ],
   "keywords": [
     "apis",
     "ts",
@@ -11,6 +16,13 @@
     "webpack",
     "plugins"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BovineBoy/extract-apis-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BovineBoy/extract-apis-webpack-plugin/issues"
+  },
   "scripts": {
     "clean": "del-cli --dot=true \"./dist/**/*\"",
     "build": "yarn clean && yarn build:compile & yarn build:types",
@@ -34,6 +46,9 @@
     "typescript": "^3.9.7",
     "universal-diff": "^2.0.2",
     "webpack": "^4.44.1"
+  },
+  "peerDependencies": {
+    "webpack": "*"
   },
   "engines": {
     "node": ">=8.9.0"
