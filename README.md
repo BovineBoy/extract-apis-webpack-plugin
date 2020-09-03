@@ -5,13 +5,13 @@
 ## Install
 
 ```javascript
-yarn add @ordures/extract-apis-webpack-plugins --dev
+yarn add @ordures/extract-apis-webpack-plugin --dev
 ```
 
 或
 
 ```javascript
-npm install @ordures/extract-apis-webpack-plugins --dev
+npm install @ordures/extract-apis-webpack-plugin --dev
 ```
 
 ## Usage
@@ -19,13 +19,15 @@ npm install @ordures/extract-apis-webpack-plugins --dev
 webpack:
 
 ```javascript
+import { ExtractApisPlugin } from "@ordures/extract-apis-webpack-plugin"
+
 plugins: [
-    new ExtractApisPlugin({
-      filename: 'apis',
-      requireContext: ['/src/modules/', '/src/components/'],
-      outputPath: '/src/types/apis-keys.d.ts'
-    })
-  ]
+  new ExtractApisPlugin({
+    filename: 'apis',
+    requireContext: ['/src/modules/', '/src/components/'],
+    outputPath: '/src/types/apis-keys.d.ts'
+  })
+]
 ```
 
 ## Options
