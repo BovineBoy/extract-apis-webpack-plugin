@@ -1,6 +1,6 @@
 {
   "name": "@ordures/extract-apis-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "bovine <vbovine@163.com>",
   "description": "从项目中提取 apis 的声明生成 apis-keys.d.ts 文件",
   "main": "dist/extract-apis-webpack-plugin.js",
