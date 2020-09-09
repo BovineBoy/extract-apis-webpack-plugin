@@ -1,10 +1,10 @@
 'use strict';
 
 const nodeVersion = require('./config/node-version');
-const isProd = process.env.NODE_ENV === 'production' ? true : false;
+const webpackVersion = require('./config/webpack-version');
 
 const babel = {
-    plugins: [],
+    comments: false,
     presets: [
         [
             '@babel/preset-env',
@@ -17,16 +17,5 @@ const babel = {
         '@babel/preset-typescript'
     ]
 };
-
-if (isProd) {
-    // 不带注释和console
-    babel.comments = false;
-    babel.plugins.push([
-        'transform-remove-console',
-        {
-            exclude: ['error', 'warn']
-        }
-    ]);
-}
 
 module.exports = babel;

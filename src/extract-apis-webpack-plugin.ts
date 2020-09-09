@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import readPkgUp from 'read-pkg-up';
 import { Compiler, compilation as compilationType, Stats } from 'webpack';
 
 type Compilation = compilationType.Compilation;
@@ -52,8 +53,10 @@ class ExtractApisPlugin {
 
     constructor(options: Options) {
         if (options && isPlainObject(options) === false) {
+            const packageJson = readPkgUp.sync()?.packageJson;
+            const doc = packageJson?.repository?.url;
             throw new Error(`extract-apis-webpack-plugin only accepts an options object. See:
-            https://git.forchange.cn/web/common/extract-apis-webpack-plugin`);
+            ${doc}`);
         }
 
         this.paths = Array.isArray(options?.paths)

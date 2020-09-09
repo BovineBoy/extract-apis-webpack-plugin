@@ -16,10 +16,33 @@ module.exports = {
     plugins: ['@typescript-eslint'],
     parser: '@typescript-eslint/parser',
     rules: {
-        'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
+        'linebreak-style': ['error', 'unix'],
         '@typescript-eslint/no-inferrable-types': 'off',
         '@typescript-eslint/no-explicit-any': 'off'
-    }
+    },
+    overrides: [
+        {
+            files: ['config/**/*.js', 'config/**/.*.js'],
+            parserOptions: {
+                sourceType: 'script'
+            },
+            rules: {
+                strict: ['error', 'safe'],
+                '@typescript-eslint/no-var-requires': 'off'
+            }
+        },
+        {
+            files: [
+                'config/**/*.test.js',
+                'config/**/*.spec.js',
+                'src/**/*.test.js',
+                'src/**/*.spec.js'
+            ],
+            rules: {
+                'no-undef': 'off'
+            }
+        }
+    ]
 };
