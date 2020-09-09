@@ -36,7 +36,7 @@
     "test:watch": "jest --watch",
     "eslint:fix": "eslint --fix",
     "git-pre-commit": "sh ./blockfieldlint.sh && lint-staged",
-    "git-pre-push": "npm run build && npm run eslint && npm run typescript && npm run test:all && npm run dev",
+    "git-pre-push": "npm run build && npm run eslint && npm run typescript && npm run test:all",
     "release": "np"
   },
   "devDependencies": {
