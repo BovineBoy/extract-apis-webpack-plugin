@@ -1,7 +1,6 @@
 'use strict';
 
 const nodeVersion = require('./config/node-version');
-const webpackVersion = require('./config/webpack-version');
 
 const babel = {
     comments: false,
